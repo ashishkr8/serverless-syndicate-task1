@@ -29,7 +29,17 @@
     "resource_type": "api_gateway",
     "deploy_stage": "api",
     "dependencies": [],
-    "resources": {},
+    "resources": {
+      "/hello":{
+        "methods":{
+          "GET":{
+            "integration_type":"lambda",
+            "lambda_name":"hello_world",
+            "auth_type":"NONE"
+          }
+        }
+      }
+    },
     "tags": {}
   }
 }
